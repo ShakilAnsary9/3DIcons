@@ -1,0 +1,144 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+/* FlatIcon */
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+
+body {
+  background-color: #212529 !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  color: #ffffff !important;
+}
+.logo {
+  width: 120px;
+}
+.logo img {
+  width: 98%;
+  height: 98%;
+  object-fit: contain;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  padding-right: 15px;
+}
+.menu a:last-child {
+  padding-right: 0;
+}
+.menu a:hover {
+  background: linear-gradient(
+    to right,
+    #ffc83a 20%,
+    #ff008a 30%,
+    #6100ff 70%,
+    #ffffff 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.profile {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.profile::before {
+  content: "";
+  background-image: conic-gradient(#ffc83a 20deg, #ff008a, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.profile img {
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 9;
+}
+.icon-box {
+  background-color: #343a40;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 22px 0;
+}
+.icon-clay {
+  height: 120px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.icon-clay img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+.icon-down-btn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529c7;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+}
+.icon-down-btn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.icon-down-btn i {
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: #566cec;
+  background-image: linear-gradient(120deg, #ffc83a, #ff008a 55%, #6100ff);
+}
+.icon-clay:hover .icon-down-btn {
+  opacity: 1;
+}
+.icon-package {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.icon-package-download a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 25px;
+  background-color: #566cec;
+  background-image: linear-gradient(120deg, #ffc83a, #ff008a 55%, #6100ff);
+  border-radius: 10px;
+}
